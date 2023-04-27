@@ -23,7 +23,7 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
                 />
                 <input
                   type="date"
-                  name="Deadline"
+                  name="deadline"
                   value={newTask.deadline}
                   onChange={handleChange}
                   placeholder="Deadline"
@@ -31,7 +31,7 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
                 />
                 <input
                   type="time"
-                  name="Time"
+                  name="time"
                   value={newTask.time}
                   onChange={handleChange}
                   placeholder="time"

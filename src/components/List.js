@@ -4,9 +4,8 @@ function List({ todos }) {
       <div>
         <ul className="divide-y divide-gray-100">
           {todos.map((task) => (
-            <li className="flex justify-between gap-x-6 py-5">
+            <li key={task.title} className="flex justify-between gap-x-6 py-5">
               <div className="flex gap-x-4">
-                {/* checkbox */}
                 <input
                   type="checkbox"
                   className="appearance-none checked:bg-blue-500"
@@ -18,7 +17,7 @@ function List({ todos }) {
                   <p className="mt-1 truncate text-xs leading-5 text-gray-500">
                     {task.deadline}
                   </p>
-                  <p className="">{task.time}</p>
+                  <p className="mt-1 truncate text-xs leading-5 text-gray-500">{task.time}</p>
                 </div>
               </div>
             </li>

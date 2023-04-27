@@ -1,4 +1,5 @@
 import "./App.css";
+import "tailwindcss/tailwind.css";
 import { useState } from "react";
 import AddTask from "./components/AddTask";
 import List from "./components/List";
@@ -37,27 +38,26 @@ function App() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log(event.target, name, value)
+
     setNewTask((prevState) => ({ ...prevState, [name]: value }));
   };
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newId = todos.length + 1;
-    const newTaskWithId = {
-      id: newId,
-      ...newTask,
-    };
 
-    setTodos([...todos, newTaskWithId]);
+    setTodos([...todos, newTask]);
 
     setNewTask({
+      id: newTask.id + 1,
       title: "",
       deadline: "",
       time: "",
       status: "incomplete",
     });
   };
+  console.log(newTask)
   return (
     <div className="App">
       <AddTask
