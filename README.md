@@ -33,12 +33,3 @@ If you'd like to contribute to the development of the app, follow these steps:
 ### License
 The Task Management App is released under thr MIT License. 
 See the LICENSE file for details.
-
-
-
-
-
-r the maintainers to review and merge your changes
-
-### License
-app/docs/troubleshooting#npm-run-build-fails-to-minify)
