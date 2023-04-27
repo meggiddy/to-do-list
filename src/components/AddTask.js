@@ -27,7 +27,7 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
                   value={newTask.deadline}
                   onChange={handleChange}
                   placeholder="Deadline"
-                  className="text-gray-400 w-full border-2 border-gray-300 p-2 rounded-lg"
+                  className="text-gray-400 w-full border-2 border-gray-400 p-2 rounded-lg"
                 />
                 <input
                   type="time"
@@ -35,7 +35,7 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
                   value={newTask.time}
                   onChange={handleChange}
                   placeholder="time"
-                  className="text-gray-400 w-full border-2 border-gray-300 p-2 rounded-lg"
+                  className="text-gray-400 w-full border-2 border-gray-400 p-2 rounded-lg"
                 />
               </div>
             </div>
