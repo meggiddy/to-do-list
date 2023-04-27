@@ -5,6 +5,8 @@ import AddTask from "./components/AddTask";
 import List from "./components/List";
 
 function App() {
+  const [heroImage, setHeroImage] = useState("images/cute.gif");
+  const [sucessImage, setSuccessImage] = useState(false);
   const [newTask, setNewTask] = useState({
     title: "",
     deadline: "",
@@ -39,11 +41,14 @@ function App() {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setNewTask((prevState) => ({ ...prevState, [name]: value }));
+    setHeroImage("images/typing.gif");
+    setSuccessImage(false);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    setHeroImage("images/excited.gif");
+    setSuccessImage(true);
     setTodos([...todos, newTask]);
 
     setNewTask({
@@ -53,16 +58,26 @@ function App() {
       time: "",
       status: "incomplete",
     });
+    setTimeout(() => {
+      setHeroImage("images/cute.gif");
+      setSuccessImage(false);
+    }, 3000);
   };
 
   return (
-    <div className="App">
+    <div>
       <AddTask
         newTask={newTask}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        heroImage={heroImage}
       />
-      <List todos={todos} setTodos={setTodos} />
+      <List
+        todos={todos}
+        setTodos={setTodos}
+        setHeroImage={setHeroImage}
+        setSuccessImage={setSuccessImage}
+      />
     </div>
   );
 }

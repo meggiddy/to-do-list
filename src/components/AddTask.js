@@ -1,10 +1,10 @@
-import gif from "./images/cute.gif";
-function AddTask({ newTask, handleChange, handleSubmit }) {
+function AddTask({ heroImage, newTask, handleChange, handleSubmit }) {
+ 
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="flex items-center sm:mx-auto sm:w-full sm:max-w-sm">
-          <img alt="" src={gif}></img>
+          <img className="w-48 h-48" alt="" src={heroImage}></img>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9">
             Add a Task
           </h2>
