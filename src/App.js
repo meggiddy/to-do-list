@@ -8,7 +8,7 @@ function App() {
   const [newTask, setNewTask] = useState({
     title: "",
     deadline: "",
-    time:"",
+    time: "",
     status: "incomplete",
   });
 
@@ -38,11 +38,8 @@ function App() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target, name, value)
-
     setNewTask((prevState) => ({ ...prevState, [name]: value }));
   };
-
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -57,7 +54,7 @@ function App() {
       status: "incomplete",
     });
   };
-  console.log(newTask)
+
   return (
     <div className="App">
       <AddTask
@@ -65,7 +62,7 @@ function App() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
-      <List todos={todos} />
+      <List todos={todos} setTodos={setTodos} />
     </div>
   );
 }

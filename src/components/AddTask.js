@@ -3,7 +3,7 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="flex items-center sm:mx-auto sm:w-full sm:max-w-sm">
           <img alt="" src={gif}></img>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9">
             Add a Task
@@ -27,7 +27,7 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
                   value={newTask.deadline}
                   onChange={handleChange}
                   placeholder="Deadline"
-                  className="w-full border-2 border-gray-300 p-2 rounded-lg"
+                  className="text-gray-400 w-full border-2 border-gray-300 p-2 rounded-lg"
                 />
                 <input
                   type="time"
@@ -35,17 +35,8 @@ function AddTask({ newTask, handleChange, handleSubmit }) {
                   value={newTask.time}
                   onChange={handleChange}
                   placeholder="time"
-                  className="w-full border-2 border-gray-300 p-2 rounded-lg"
+                  className="text-gray-400 w-full border-2 border-gray-300 p-2 rounded-lg"
                 />
-                <select
-                  name="status"
-                  value={newTask.status}
-                  onChange={handleChange}
-                  className="w-full border-2 border-gray-300 p-2 rounded-lg"
-                >
-                  <option value="incomplete">Incomplete</option>
-                  <option value="complete">Complete</option>
-                </select>
               </div>
             </div>
             <div className="">
