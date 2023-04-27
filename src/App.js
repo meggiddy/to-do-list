@@ -61,7 +61,7 @@ function App() {
     setTimeout(() => {
       setHeroImage("images/cute.gif");
       setSuccessImage(false);
-    }, 3000);
+    }, 5000);
   };
 
   return (
