@@ -11,7 +11,7 @@ function List({ todos, setTodos }) {
         </h3>
         <hr className="border-gray" />
         {incompleteTasks.length === 0 && <p className=" m-10 text-sm font-semibold leading-5 text-gray-500">🎉 All Tasks Completed!</p>}
-        <ul className="flex md:flex-cols-2 justify-center divide-y divide-gray-100">
+        <ul className="flex md:flex-cols-2 justify-center">
           {incompleteTasks.map((task) => (
             <>
             <li key={task.title} className="flex justify-between gap-x-6 py-5">
@@ -51,7 +51,7 @@ function List({ todos, setTodos }) {
           Complete Tasks
         </h3>
         <hr className="border-gray" />
-        <ul className="flex md:flex-cols-2 justify-center gap-6 divide-y divide-gray-100">
+        <ul className="flex md:flex-cols-2 justify-center gap-6">
           {completeTasks.map((task) => (
             <>
             <AiOutlineCheck className='mt-10' />
